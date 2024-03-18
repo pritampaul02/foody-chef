@@ -20,7 +20,7 @@ const MealItemDetails = () => {
             const { data } = await axios.get(
                 `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
             );
-            setMealDetails(data.meals[0]);
+            setMealDetails(data.meals);
             setIsLoading(false);
         } catch (error) {
             console.log(error);
@@ -31,15 +31,14 @@ const MealItemDetails = () => {
         fetchMealDetails();
     }, []);
 
-    let ingredientsArray = [];
-    let obj = { ...mealDetails };
-    for (let key in obj) {
-        if (key.startsWith("strIngredient")) {
-            // console.log(key);
-            ingredientsArray.push(obj[key]);
-        }
-    }
-    console.log(ingredientsArray);
+    // let ingredientsArray = [];
+    // let obj = { ...mealDetails };
+    // for (let key in obj) {
+    //     if (key.startsWith("strIngredient")) {
+    //         // console.log(key);
+    //         ingredientsArray.push(obj[key]);
+    //     }
+    // }
 
     return (
         <>
@@ -48,6 +47,10 @@ const MealItemDetails = () => {
             ) : (
                 <div className="flex w-full h-full bg-slate-50 px-3">
                     {mealDetails.map((item) => {
+                        console.log(
+                            item.strMeasure20.length >= 2 ? "Do" : "OO"
+                        );
+                        console.log(item.strIngredient20.length);
                         return (
                             <div
                                 className="flex w-full lg:h-full flex-col lg:flex-row gap-3"
@@ -82,16 +85,196 @@ const MealItemDetails = () => {
                                             Ingreadiants {null}
                                         </div>
                                         <ul>
-                                            {ingredientsArray.map(
-                                                (item, index) => {
-                                                    return (
-                                                        <IngredientList
-                                                            key={index}
-                                                            item={item}
-                                                            index={index}
-                                                        />
-                                                    );
-                                                }
+                                            {item.strIngredient1.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure1}
+                                                ${item.strIngredient1}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient2.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure2}
+                                                ${item.strIngredient2}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient3.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure3}
+                                                ${item.strIngredient3}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient4.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure4}
+                                                ${item.strIngredient4}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient5.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure5}
+                                                ${item.strIngredient5}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient6.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure6}
+                                                ${item.strIngredient6}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient7.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure7}
+                                                ${item.strIngredient7}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient8.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure8}
+                                                ${item.strIngredient8}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient9.length >= 2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure9}
+                                                ${item.strIngredient9}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient10.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure10}
+                                                ${item.strIngredient10}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient11.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure11}
+                                                ${item.strIngredient11}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient12.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure12}
+                                                ${item.strIngredient12}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient13.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure13}
+                                                ${item.strIngredient13}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient14.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure14}
+                                                ${item.strIngredient14}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient15.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure15}
+                                                ${item.strIngredient15}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient16.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure16}
+                                                ${item.strIngredient16}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient17.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure17}
+                                                ${item.strIngredient17}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient18.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure18}
+                                                ${item.strIngredient18}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient19.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure19}
+                                                ${item.strIngredient19}`}
+                                                </li>
+                                            ) : (
+                                                <></>
+                                            )}
+                                            {item.strIngredient20.length >=
+                                            2 ? (
+                                                <li className="flex items-center gap-2">
+                                                    <div className="h-2 w-2 rounded-full bg-amber-300"></div>
+                                                    {`${item.strMeasure20}
+                                                ${item.strIngredient20}`}
+                                                </li>
+                                            ) : (
+                                                <></>
                                             )}
                                         </ul>
                                     </div>
