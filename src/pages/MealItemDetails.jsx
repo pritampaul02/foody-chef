@@ -20,7 +20,7 @@ const MealItemDetails = () => {
             const { data } = await axios.get(
                 `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
             );
-            setMealDetails(data.meals);
+            setMealDetails(data.meals[0]);
             setIsLoading(false);
         } catch (error) {
             console.log(error);
@@ -32,14 +32,14 @@ const MealItemDetails = () => {
     }, []);
 
     let ingredientsArray = [];
-    let obj = { ...mealDetails[0] };
+    let obj = { ...mealDetails };
     for (let key in obj) {
         if (key.startsWith("strIngredient")) {
             // console.log(key);
             ingredientsArray.push(obj[key]);
         }
     }
-    // console.log(ingredientsArray);
+    console.log(ingredientsArray);
 
     return (
         <>
@@ -106,10 +106,12 @@ const MealItemDetails = () => {
                                     </div>
 
                                     {/* youtube link  */}
-                                    <div className="w-full lg:w-[580px] h-auto p-7 mx-auto">
+                                    <div className="w-full lg:w-[580px] h-auto aspect-video p-7 mx-auto reactPalyerContainer">
                                         <ReactPlayer
                                             controls={true}
                                             url={item.strYoutube}
+                                            height="100%"
+                                            width="100%"
                                         />
                                     </div>
                                 </div>

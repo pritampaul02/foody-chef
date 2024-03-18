@@ -61,7 +61,7 @@ const Home = () => {
             {isLoading ? (
                 <Loader />
             ) : (
-                <div className="flex flex-col w-full">
+                <div className="flex flex-col w-full pb-16">
                     {/* <div className="w-full bg-black flex items-center py-4 px-3">
                         <img src={backImg} alt="Food" className="w-[60%]" />
                         <div>
