@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+# Getting Started with the creation of this Application Foody Chef
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was crated for the learning and practicing pourpose by [Pritam Paul](https://github.com/pritampaul02)
+
+## Which technologis i've used for this development
+
+<div style="display:grid;grid-template-columns:repeat(7,1fr);border:2px solid gray;
+    justify-content: center;
+    align-items: center;text-align:center;background:transparent;padding:0;box-sizing:border-box;">
+<div style="border-right:2px solid gray;padding:8px;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>ReactJS</b></div>
+<div style="border-right:2px solid gray;padding:8px;"><img src='public/tailwind.png' style='height:auto;width:60px;' ><b>Tailwind CSS</b></div>
+<div style="border-right:2px solid gray;padding:8px;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>Context Api</b></div>
+<div style="border-right:2px solid gray;padding:8px;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>The Meal DB food Api</b></div>
+<div style="border-right:2px solid gray;padding:8px;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>Axios</b></div>
+<div style="border-right:2px solid gray;padding:8px;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>React Icons</b></div>
+<div ><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>React Player</b></div>
+
+</div>
 
 ## Available Scripts
 

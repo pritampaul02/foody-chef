@@ -31,15 +31,6 @@ const MealItemDetails = () => {
         fetchMealDetails();
     }, []);
 
-    // let ingredientsArray = [];
-    // let obj = { ...mealDetails };
-    // for (let key in obj) {
-    //     if (key.startsWith("strIngredient")) {
-    //         // console.log(key);
-    //         ingredientsArray.push(obj[key]);
-    //     }
-    // }
-
     return (
         <>
             {isLoading ? (
