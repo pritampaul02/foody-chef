@@ -2,14 +2,20 @@ import React, { useContext } from "react";
 import { Context } from "../context/contextApi";
 
 const CategoryContainer = ({ item }) => {
-    const { setCategory } = useContext(Context);
+    const { category, setCategory } = useContext(Context);
+
+    const isActive = category === item.strCategory;
 
     return (
         <div
             className="flex flex-col items-center justify-center"
             onClick={() => setCategory(item.strCategory)}
         >
-            <div className="h-14 w-14 aspect-square rounded-full bg-slate-300">
+            <div
+                className={`h-14 w-14 aspect-square rounded-full ${
+                    isActive ? "bg-amber-400" : "bg-slate-300"
+                } `}
+            >
                 <img
                     src={item.strCategoryThumb}
                     alt={item.strCategory}

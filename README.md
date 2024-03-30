@@ -10,14 +10,14 @@ This project was crated for the learning and practicing pourpose by [Pritam Paul
 <div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>ReactJS</b></div>
 <div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='public/tailwind.png' style='height:auto;width:60px;' ><b>Tailwind CSS</b></div>
 <div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>Context Api</b></div>
-<div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>The Meal DB food Api</b></div>
-<div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>Axios</b></div>
-<div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>React Icons</b></div>
+<div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='https://www.themealdb.com/images/icons/favicon/favicon-32x32.png' style='height:auto;width:60px;' ><b>The Meal DB food Api</b></div>
+<div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='https://axios-http.com/assets/favicon.ico' style='height:auto;width:60px;' ><b>Axios</b></div>
+<div style="border-right:2px solid gray;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content;center;"><img src='https://react-icons.github.io/react-icons/favicon.png' style='height:auto;width:60px;' ><b>React Icons</b></div>
 <div style='display:flex;flex-direction:column;align-items:center;justify-content;center;'><img src='public/favicon.ico' style='height:auto;width:60px;' ><b>React Player</b></div>
 
 </div>
 
-## Available Scripts
+<!-- ## Available Scripts
 
 In the project directory, you can run:
 
@@ -82,4 +82,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
